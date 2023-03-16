@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <style>
+      .banner {
+        height: 93vh;
+        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+          url(bg-web.avif);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      .banner-content {
+        height: 100%;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .carousel-content {
+        background-color: #212529;
+        color: #fff;
+      }
+    </style>
+    <title>LATIHAN BOOTSTRAP</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand me-5" href="#">Krisna Ardiansah</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#product">Product</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Dropdown
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-4"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- Enf Of Navbar -->
+
+    <!-- Header -->
+    <div class="container-fluid banner">
+      <div class="container banner-content col-lg-6">
+        <div class="text-center">
+          <p class="fs-1">Selamat Datang Di Great Bakery</p>
+          <p class="d-none d-sm-block">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae,
+            voluptatibus. Nemo animi quidem ullam dolor, impedit ea voluptas
+            exercitationem dicta?
+          </p>
+          <button
+            class="btn btn-outline-light btn-lg mt-5"
+            data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop"
+          >
+            Reservasi
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="staticBackdrop"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">
+              Formulir Reservasi
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-2">
+                <label for="nama" class="form-label">Nama</label>
+                <input type="text" id="nama" class="form-control" />
+              </div>
+              <div class="mb-2">
+                <label for="hanpdhone" class="form-label">No. Handphone</label>
+                <input type="text" id="hanpdhone" class="form-control" />
+              </div>
+              <div class="mb-2">
+                <label for="tanggal" class="form-label"
+                  >Tanggla Reservasi</label
+                >
+                <input type="date" id="tanggal" class="form-control" />
+              </div>
+              <div class="mb-2">
+                <label for="jam" class="form-label">Jam</label>
+                <input type="time" id="jam" class="form-control" />
+              </div>
+              <div class="mb-2">
+                <label for="jumlah" class="form-label">Jumlah Orang</label>
+                <input type="number" id="jumlah" class="form-control" />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-danger"
+              data-bs-dismiss="modal"
+            >
+              TUTUP
+            </button>
+            <button type="button" class="btn btn-primary">KIRIM</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Of Header -->
+
+    <!-- Acordion -->
+    <div class="mt-5 mb-0 container col-md-8 col-lg-10">
+      <h2 id="about" class="text-center text-capitalize mb-5">
+        kenapa harus belanja di great bakery
+      </h2>
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseOne"
+              aria-expanded="false"
+              aria-controls="flush-collapseOne"
+            >
+              Harga Terjangkau
+            </button>
+          </h2>
+          <div
+            id="flush-collapseOne"
+            class="accordion-collapse collapse"
+            aria-labelledby="flush-headingOne"
+          >
+            <div class="accordion-body">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Dignissimos odio nesciunt earum, maiores quos quam tempore
+              corporis distinctio! Incidunt earum dolorem non blanditiis culpa
+              ab! Quod doloremque velit porro eveniet. Officiis, dolorum vel
+              amet tempora quibusdam autem maxime praesentium iure aliquam unde
+              numquam doloribus, necessitatibus earum. Iure nesciunt nemo ullam.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingTwo">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseTwo"
+              aria-expanded="false"
+              aria-controls="flush-collapseTwo"
+            >
+              Fresh From Oven
+            </button>
+          </h2>
+          <div
+            id="flush-collapseTwo"
+            class="accordion-collapse collapse"
+            aria-labelledby="flush-headingTwo"
+          >
+            <div class="accordion-body">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+              veniam quos error odit corrupti, est temporibus neque sed nulla
+              adipisci vitae maxime nihil. Veritatis obcaecati odit voluptatem
+              culpa beatae minus laboriosam! Alias dolores quia aliquam,
+              laboriosam illum veniam reprehenderit. Ratione?
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingThree">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseThree"
+              aria-expanded="false"
+              aria-controls="flush-collapseThree"
+            >
+              Jaminan Uang kembali
+            </button>
+          </h2>
+          <div
+            id="flush-collapseThree"
+            class="accordion-collapse collapse"
+            aria-labelledby="flush-headingThree"
+          >
+            <div class="accordion-body">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+              aspernatur rem eum odit laborum veritatis hic culpa. Sequi maiores
+              quisquam, molestiae perferendis numquam blanditiis odit laboriosam
+              corrupti praesentium repudiandae modi autem sunt nostrum maxime
+              deleniti nesciunt dolorum voluptatem atque repellendus quos
+              dignissimos velit. Odio ipsa aliquid veniam cum temporibus
+              aspernatur asperiores ab nesciunt dolores sunt totam pariatur,
+              quod praesentium harum!
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingThree">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseFour"
+              aria-expanded="false"
+              aria-controls="flush-collapseThree"
+            >
+              Cashback 30%
+            </button>
+          </h2>
+          <div
+            id="flush-collapseFour"
+            class="accordion-collapse collapse"
+            aria-labelledby="flush-headingThree"
+          >
+            <div class="accordion-body">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+              aspernatur rem eum odit laborum veritatis hic culpa. Sequi maiores
+              quisquam, molestiae perferendis numquam blanditiis odit laboriosam
+              corrupti praesentium repudiandae modi autem sunt nostrum maxime
+              deleniti nesciunt dolorum voluptatem atque repellendus quos
+              dignissimos velit. Odio ipsa aliquid veniam cum temporibus
+              aspernatur asperiores ab nesciunt dolores sunt totam pariatur,
+              quod praesentium harum!
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End fo accordion -->
+
+    <!-- Carousel -->
+    <div id="product" class="container-fluid carousel-content">
+      <h2 class="text-center pt-5">Product Terbaik Kami</h2>
+      <div class="container py-5">
+        <div id="carouselExample" class="carousel slide col-lg-8 offset-lg-2">
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="product/product-1.avif"
+                class="d-block w-100"
+                alt="..."
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Product 1</h5>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Similique, molestiae? A voluptatum tempore quae obcaecati
+                  autem, temporibus numquam ut repudiandae.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="product/product-2.avif"
+                class="d-block w-100"
+                alt="..."
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Product 2</h5>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Similique, molestiae? A voluptatum tempore quae obcaecati
+                  autem, temporibus numquam ut repudiandae.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="product/product-3.avif"
+                class="d-block w-100"
+                alt="..."
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Product 3</h5>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Similique, molestiae? A voluptatum tempore quae obcaecati
+                  autem, temporibus numquam ut repudiandae.
+                </p>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- End Of Carouse -->
+
+    <!-- Bootstrap Image -->
+    <div class="container-fluid py-5" style="background-color: #ddd">
+      <div class="container">
+        <h2 class="text-center">Produk Terlaris</h2>
+        <div class="col-lg-6 col-md-8 d-block mx-auto mt-5">
+          <img src="product/Terlaris-1.avif" class="img-fluid img-thumbnail" />
+        </div>
+      </div>
+    </div>
+    <!-- End of Bootstrap Image -->
+
+    <!-- Block Quote -->
+    <div class="container-fluid py-5 bg-dark text-light">
+      <div class="container">
+        <h2 class="text-center mb-5">Apa Kata Customer Kami</h2>
+
+        <div class="col-12 mb-4">
+          <figure class="text-center text-md-start">
+            <blockquote class="blockquote">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
+                modi quia.
+              </p>
+            </blockquote>
+            <figcaption class="blockquote-footer">Maria Soya</figcaption>
+          </figure>
+
+          <div class="col-12 mb-4">
+            <figure class="text-center text-md-end">
+              <blockquote class="blockquote">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
+                  modi quia.
+                </p>
+              </blockquote>
+              <figcaption class="blockquote-footer">Iron Man</figcaption>
+            </figure>
+          </div>
+
+          <div class="col-12 mb-4">
+            <figure class="text-center text-md-start">
+              <blockquote class="blockquote">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
+                  modi quia.
+                </p>
+              </blockquote>
+              <figcaption class="blockquote-footer">Captain America</figcaption>
+            </figure>
+          </div>
+
+          <div class="col-12 mb-4">
+            <figure class="text-center text-md-end">
+              <blockquote class="blockquote">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
+                  modi quia.
+                </p>
+              </blockquote>
+              <figcaption class="blockquote-footer">Spiderman</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End of Block Quote -->
+
+    <!-- Card -->
+    <div class="container-fluid py-5">
+      <div class="container">
+        <h2 class="text-center mb-5">Produk Kami</h2>
+
+        <div class="col-12">
+          <div class="row">
+            <div class="col-lg-3 mb-5">
+              <div class="list-group list-group-flush">
+                <a
+                  href="#"
+                  class="list-group-item d-flex justify-content-between align-items-center"
+                  >Product 1
+                  <span class="badge bg-primary rounded-pill">2</span>
+                </a>
+
+                <a
+                  href="#"
+                  class="list-group-item d-flex justify-content-between align-items-center"
+                  >Product 2
+                  <span class="badge bg-primary rounded-pill">18</span>
+                </a>
+                <a
+                  href="#"
+                  class="list-group-item d-flex justify-content-between align-items-center"
+                  >Product 3
+                  <span class="badge bg-primary rounded-pill">9</span>
+                </a>
+                <a
+                  href="#"
+                  class="list-group-item d-flex justify-content-between align-items-center"
+                  >Product 4
+                  <span class="badge bg-primary rounded-pill">6</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Product -->
+            <div class="col-lg-9">
+              <div class="row">
+                <div class="col-12 col-md-6 col-lg-3 mb-3">
+                  <div class="card text-center">
+                    <img
+                      src="product/product-1.avif"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title text-center">Product 1</h5>
+                      <p class="card-text">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Veniam cumque nam, nulla tempora!
+                      </p>
+                      <div class="dropstart">
+                        <button
+                          data-bs-toggle="dropdown"
+                          type="button"
+                          class="btn btn-success btn-lg"
+                        >
+                          LIHAT
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                          <li>
+                            <a class="dropdown-item" href="#">Lihat Detail</a>
+                          </li>
+                          <li><hr class="dropdown-divider" /></li>
+                          <li>
+                            <a class="dropdown-item" href="#">Beli</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3 mb-3">
+                  <div class="card text-center">
+                    <img
+                      src="product/product-2.avif"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title text-center">Product 2</h5>
+                      <p class="card-text">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Veniam cumque nam, nulla tempora!
+                      </p>
+                      <button
+                        data-bs-toggle="dropdown"
+                        type="button"
+                        class="btn btn-success btn-lg"
+                      >
+                        LIHAT
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3 mb-3">
+                  <div class="card text-center">
+                    <img
+                      src="product/product-3.avif"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title text-center">Product 3</h5>
+                      <p class="card-text">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Veniam cumque nam, nulla temporae!
+                      </p>
+                      <button
+                        data-bs-toggle="dropdown"
+                        type="button"
+                        class="btn btn-success btn-lg"
+                      >
+                        LIHAT
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3 mb-3">
+                  <div class="card text-center">
+                    <img
+                      src="product/Terlaris-1.avif"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title text-center">Product 4</h5>
+                      <p class="card-text">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Veniam cumque nam, nulla tempora!
+                      </p>
+                      <button
+                        data-bs-toggle="dropdown"
+                        type="button"
+                        class="btn btn-success btn-lg"
+                      >
+                        LIHAT
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End of Product -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End of Card -->
+
+    <!-- Table -->
+    <div class="container-fluid py-5">
+      <div class="container col-md-10">
+        <h2 class="text-center mb-5">
+          Customer Beruntung Minggu Ini
+          <a
+            tabindex="0"
+            data-bs-trigger="focus"
+            type="button"
+            class="btn btn-link"
+            data-bs-container="body"
+            data-bs-toggle="popover"
+            data-bs-placement="top"
+            title="Information"
+            data-bs-content="Pengundian di lakukan setiap jum'at jam 16::00"
+          >
+            ?
+          </a>
+        </h2>
+
+        <div class="table-responsive">
+          <table class="table table-striped border-dark table-bordered">
+            <thead class="bg-dark text-light">
+              <tr>
+                <th scope="col">No</th>
+                <th scope="col">Nama</th>
+                <th scope="col">No. Handphone</th>
+                <th scope="col">Tangal Pembelian</th>
+                <th scope="col">No. Struck</th>
+                <th scope="col">No. Undian</th>
+                <th scope="col">Hadiah</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>0856xxxxxx</td>
+                <td>12-jully-2022</td>
+                <td>00897878</td>
+                <td>534</td>
+                <td>Paket Hemat 20Rb</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Cristiano</td>
+                <td>0213xxxxxx</td>
+                <td>18-Agustus-2022</td>
+                <td>00897878</td>
+                <td>534</td>
+                <td>Paket Hemat 20Rb</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Mark</td>
+                <td>0856xxxxxx</td>
+                <td>12-jully-2022</td>
+                <td>00897878</td>
+                <td>534</td>
+                <td>Paket Hemat 20Rb</td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td>Mark</td>
+                <td>0856xxxxxx</td>
+                <td>12-jully-2022</td>
+                <td>00897878</td>
+                <td>534</td>
+                <td>Paket Hemat 20Rb</td>
+              </tr>
+              <tr>
+                <th scope="row">5</th>
+                <td>Mark</td>
+                <td>0856xxxxxx</td>
+                <td>12-jully-2022</td>
+                <td>00897878</td>
+                <td>534</td>
+                <td>Paket Hemat 20Rb</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!-- End Of Table -->
+
+    <!-- Form -->
+    <div class="container-fluid py-5 bg-dark text-light">
+      <div class="container">
+        <h2 class="text-center mb-4">Hubungi Kami</h2>
+
+        <div class="offset-lg-2 col-lg-8">
+          <div class="alert alert-success" id="myAlert">
+            Formulir Berhasil Di kirim
+          </div>
+
+          <form>
+            <div class="mb-3">
+              <div class="row">
+                <div class="col-lg-6">
+                  <label class="form-label" for="nama">Nama Depan</label>
+                  <input
+                    type="text"
+                    id="nama"
+                    class="form-control"
+                    autocomplete="off"
+                  />
+                </div>
+                <div class="col-lg-6">
+                  <label class="form-label" for="nama">Nama Belakang</label>
+                  <input
+                    type="text"
+                    id="nama"
+                    class="form-control"
+                    autocomplete="off"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="username">username</label>
+              <div class="input-group">
+                <span class="input-group-text">@</span>
+                <input type="text" class="form-control" />
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label" for="email">Email</label>
+              <input
+                type="text"
+                id="email"
+                class="form-control"
+                autocomplete="off"
+              />
+              <label class="from-text text-danger"
+                >*Email anda tidak akan di sebarluaskan</label
+              >
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label" for="tingkaturgensi"
+                >Tingkat Urgensi</label
+              >
+              <select class="form-select" id="tingkaturgensi">
+                <option value="penting">Penting</option>
+                <option value="normal">Normal</option>
+                <option value="tidak Penting">tidak Penting</option>
+              </select>
+            </div>
+
+            <div class="mb-3 form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                id="komplain"
+                name="kategori"
+              />
+              <label class="form-check-label" for="komplain">Komplain</label>
+            </div>
+            <div class="mb-3 form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                id="saran"
+                name="kategori"
+              />
+              <label class="form-check-label" for="saran">Saran</label>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label" for="deskripsi">Deskripsi</label>
+              <textarea
+                id="deskripsi"
+                class="form-control"
+                cols="30"
+                rows="10"
+              ></textarea>
+            </div>
+
+            <div class="mb-3">
+              <a href="#" onclick="myFunction()" class="btn btn-primary w-100">
+                kirim
+              </a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- End Of Form -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      var popoverTriggerList = [].slice.call(
+        document.querySelectorAll('[data-bs-toggle="popover"]')
+      );
+      var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl);
+      });
+
+      var myAlert = document.getElementById("myAlert");
+
+      myAlert.style.display = "none";
+
+      function myFunction() {
+        myAlert.style.display = "block";
+      }
+    </script>
+  </body>
+</html>
